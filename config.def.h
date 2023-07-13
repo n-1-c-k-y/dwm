@@ -68,13 +68,11 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "st", NULL };
 static const char *sharenixcmd[] = { "sharenix-section", NULL};
 static const char *rangercmd[] = { "st", "-e", "ranger",  NULL};
-static const char *roficmd[] = { "rofi", "-show", "drun", "shows", NULL};
 
 #include "shiftview.c"
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_F12,    spawn,          {.v = dmenucmd } },
-	{ MODKEY,                       XK_F11,    spawn,          {.v = roficmd } },
 	{ MODKEY,                       XK_F8,     spawn,          {.v = rangercmd } },
 	{ MODKEY,                       XK_t,      spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
